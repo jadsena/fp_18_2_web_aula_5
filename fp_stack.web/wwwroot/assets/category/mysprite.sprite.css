@@ -1,0 +1,58 @@
+/*
+This is an example of how to use the image sprite in your own CSS files
+*/
+.mysprite {
+	background-image: url('mysprite.sprite.jpg');
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.mysprite.acer {
+	width: 119px;
+	height: 63px;
+	background-position: -10px -10px;
+}
+.mysprite.apple {
+	width: 125px;
+	height: 64px;
+	background-position: -10px -83px;
+}
+.mysprite.asus {
+	width: 124px;
+	height: 67px;
+	background-position: -10px -157px;
+}
+.mysprite.black {
+	width: 130px;
+	height: 65px;
+	background-position: -10px -234px;
+}
+.mysprite.blue {
+	width: 120px;
+	height: 67px;
+	background-position: -10px -309px;
+}
+.mysprite.carton {
+	width: 136px;
+	height: 66px;
+	background-position: -10px -386px;
+}
+.mysprite.computer {
+	width: 153px;
+	height: 67px;
+	background-position: -10px -462px;
+}
+.mysprite.lenovo {
+	width: 139px;
+	height: 73px;
+	background-position: -10px -539px;
+}
+.mysprite.pink {
+	width: 119px;
+	height: 70px;
+	background-position: -10px -622px;
+}
+.mysprite.rose {
+	width: 151px;
+	height: 67px;
+	background-position: -10px -702px;
+}

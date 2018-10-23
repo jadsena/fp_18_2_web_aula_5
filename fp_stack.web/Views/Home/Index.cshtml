@@ -6,14 +6,14 @@
 }
 
 @*<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script type="text/javascript">
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
 
-    $.get("https://localhost:5001/api/v1.0/perguntas/", function (data, status) {
-        console.log("Data: " + data);
-    });
-</script>*@
+        $.get("https://localhost:5001/api/v1.0/perguntas/", function (data, status) {
+            console.log("Data: " + data);
+        });
+    </script>*@
 
 
 
@@ -35,102 +35,62 @@
             </div>
             <div>
                 <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                       <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
             </div>
             <div>	    </div>
-         
+
         </div>
     </div>
 </div>
-
-<script>
-    (function ($) {
-        $(function () {
-            var jcarousel = $('.jcarousel');
-
-            jcarousel
-                .on('jcarousel:reload jcarousel:create', function () {
-                    var carousel = $(this),
-                        width = carousel.innerWidth();
-
-
-                    carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
-                })
-                .jcarousel({
-                    wrap: 'circular'
-                });
-
-            $('.jcarousel-control-prev')
-                .jcarouselControl({
-                    target: '-=1'
-                });
-
-            $('.jcarousel-control-next')
-                .jcarouselControl({
-                    target: '+=1'
-                });
-
-            $('.jcarousel-pagination')
-                .on('jcarouselpagination:active', 'a', function () {
-                    $(this).addClass('active');
-                })
-                .on('jcarouselpagination:inactive', 'a', function () {
-                    $(this).removeClass('active');
-                })
-                .on('click', function (e) {
-                    e.preventDefault();
-                })
-                .jcarouselPagination({
-                    perPage: 1,
-                    item: function (page) {
-                        return '<a href="#' + page + '">' + page + '</a>';
-                    }
-                });
-        });
-    })(jQuery);
-</script>
-
 <div class="row">
     <div id="menu">
         <ul>
             <li>
-                <img class="icon" src="~/assets/category/acer.JPG" />
+                @*<img class="icon" src="~/assets/category/acer.JPG" />*@
+                <div class="mysprite acer"></div>
                 Acer
             </li>
             <li>
-                <img class="icon" src="~/assets/category/apple.JPG" />
+                <div class="mysprite apple"></div>
+
                 Apple
             </li>
             <li>
-                <img class="icon" src="~/assets/category/asus.JPG" />
+                <div class="mysprite asus"></div>
                 Asus
             </li>
             <li>
-                <img class="icon" src="~/assets/category/black.JPG" />
+                <div class="mysprite black"></div>
+
                 Black
             </li>
             <li>
-                <img class="icon" src="~/assets/category/blue.JPG" />
+                <div class="mysprite blue"></div>
                 Blue
             </li>
             <li>
-                <img class="icon" src="~/assets/category/carton.JPG" />
+                <div class="mysprite carton"></div>
+
                 Cartoon
             </li>
             <li>
-                <img class="icon" src="~/assets/category/computer.JPG" />
+                <div class="mysprite computer"></div>
+
                 Computer
             </li>
             <li>
-                <img class="icon" src="~/assets/category/lenovo.JPG" />
+                <div class="mysprite lenovo"></div>
+
                 Lenovo
             </li>
             <li>
-                <img class="icon" src="~/assets/category/pink.JPG" />
+                <div class="mysprite pink"></div>
+
                 Pink
             </li>
             <li>
-                <img class="icon" src="~/assets/category/rose.JPG" />
+                <div class="mysprite rose"></div>
+
                 Rose
             </li>
         </ul>
@@ -159,3 +119,52 @@
         }
     </ul>
 </div>
+@section Scripts {
+
+    <script>
+        (function ($) {
+            $(function () {
+                var jcarousel = $('.jcarousel');
+
+                jcarousel
+                    .on('jcarousel:reload jcarousel:create', function () {
+                        var carousel = $(this),
+                            width = carousel.innerWidth();
+
+
+                        carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+                    })
+                    .jcarousel({
+                        wrap: 'circular'
+                    });
+
+                $('.jcarousel-control-prev')
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+
+                $('.jcarousel-control-next')
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
+
+                $('.jcarousel-pagination')
+                    .on('jcarouselpagination:active', 'a', function () {
+                        $(this).addClass('active');
+                    })
+                    .on('jcarouselpagination:inactive', 'a', function () {
+                        $(this).removeClass('active');
+                    })
+                    .on('click', function (e) {
+                        e.preventDefault();
+                    })
+                    .jcarouselPagination({
+                        perPage: 1,
+                        item: function (page) {
+                            return '<a href="#' + page + '">' + page + '</a>';
+                        }
+                    });
+            });
+        })(jQuery);
+    </script>
+}
